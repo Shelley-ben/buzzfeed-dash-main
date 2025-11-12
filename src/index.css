@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Light Theme Colors - converted from OKLCH to HSL */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 20%;
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 0 0% 44%;
+    --primary: 161 48% 75%;
+    --primary-foreground: 166 24% 28%;
+    --secondary: 0 0% 99%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 24%;
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 24%;
+    --destructive: 33 78% 58%;
+    --destructive-foreground: 17 25% 97%;
+    --border: 0 0% 90%;
+    --input: 0 0% 97%;
+    --ring: 161 48% 75%;
+
+    /* Sidebar */
+    --sidebar: 0 0% 99%;
+    --sidebar-foreground: 0 0% 55%;
+    --sidebar-primary: 161 48% 75%;
+    --sidebar-primary-foreground: 166 24% 28%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 24%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 161 48% 75%;
+  }
+
+  .dark {
+    /* Dark Theme Colors - converted from OKLCH to HSL */
+    --background: 0 0% 18%;
+    --foreground: 256 18% 92%;
+    --card: 0 0% 20%;
+    --card-foreground: 256 18% 92%;
+    --popover: 0 0% 26%;
+    --popover-foreground: 0 0% 73%;
+    --primary: 157 42% 54%;
+    --primary-foreground: 167 35% 88%;
+    --secondary: 0 0% 26%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 24%;
+    --muted-foreground: 0 0% 71%;
+    --accent: 0 0% 31%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 30 48% 42%;
+    --destructive-foreground: 34 20% 91%;
+    --border: 0 0% 28%;
+    --input: 0 0% 26%;
+    --ring: 152 62% 70%;
+
+    /* Dark Sidebar */
+    --sidebar: 0 0% 18%;
+    --sidebar-foreground: 0 0% 63%;
+    --sidebar-primary: 157 42% 54%;
+    --sidebar-primary-foreground: 167 35% 88%;
+    --sidebar-accent: 0 0% 31%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 28%;
+    --sidebar-ring: 152 62% 70%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.025em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    backdrop-filter: blur(16px);
+    background: hsl(var(--card) / 0.8);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
